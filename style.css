@@ -96,11 +96,65 @@ h1 {
     flex-direction: row;
     justify-content: space-around;
     text-align: left;
+    margin-bottom: 20rem;
 }
 
-.display div {
-    margin: 4rem;
+.display-container {
+    max-height: 40vh;
+    margin: 2rem 0;
     box-shadow: 0px 2px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.display div h3, .display div p{
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.display-options{
+    display: flex;
+    flex-direction: row;
+}
+
+.display-options div {
+    background-color: #8c8f8f;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.display-options div ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.display-options div ul li {
+    /* margin: 0.5rem 0.1rem 0 0; */
+    padding: 0;
+}
+
+.display-icon {
+    float: left;
+    padding: 1em 0.1em 0.1em;
+}
+
+.display-location {
+    display: inline-block;
+}
+
+.views{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
+
+.views div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+
+.views div i{
+    margin-bottom: -1em;
+    margin-right: 0.5em;
 }
 
 .places {
@@ -115,9 +169,27 @@ h1 {
     "one four five";
     gap: 8px 10px;
     padding: 3rem 0;
+    /* filter: brightness(50%); */
 }
 
-.places img:hover{
+.place-image{
+    position: relative;
+}
+
+.place-image img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.place-image p {
+    position: absolute;
+    transform: translate(10%, -150%);
+    color: white;
+    font-size: 2rem;
+}
+
+.place-image img:hover{
     transform: scale(1.1);
     transition: all 0.6s ease-out;
 }
@@ -167,7 +239,7 @@ h1 {
     box-sizing: border-box;
 }
 
-i {
+.service-icons {
     padding: 0.5rem 0;
 }
 
@@ -183,7 +255,7 @@ i {
 }
 
 footer{
-    background-color: rgba(42, 59, 58, 0.3);
+    background-color: rgba(42, 59, 58, 0.9);
     /* display: flex; */
     /* flex-direction: row; */
     padding: 2rem 0;
